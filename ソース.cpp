@@ -87,7 +87,7 @@ template<class T>
 bool Drop(Vector<T>& In, size_t P) {
 	if (Size(In) <= P) { return false; }
 
-	for (size_t i = P; i < Size(In)-1; i++) {
+	for (size_t i = P; i+1 < Size(In)-1; i++) {
 		(*Index(In, i)) = (Index(In, i + 1));
 	}
 	In.Use--;
@@ -98,7 +98,7 @@ bool Drop(Vector<T>& In, size_t P,size_t L) {
 	if (Size(In) <= P) { return false; }
 	if (Size(In) <= P+L) { return false; }
 
-	for (size_t i = P; i < Size(In)-1; i++) {
+	for (size_t i = P; i+L < Size(In)-1; i++) {
 		(*Index(In, i)) = (Index(In, i + L));
 	}
 
