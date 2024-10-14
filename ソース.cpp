@@ -55,7 +55,14 @@ bool Push(Vector<T>& In, const T& D) {
 
 	return true;
 }
-
+template<class T>
+bool Clear(Vector<T> In) {
+	if (Free(In.M) == false) { return false; };
+	In.Capacity = 0;
+	In.Margin = 0;
+	In.Use = 0;
+	return true;
+}
 template <class T>
 bool Pop(Vector<T>& In) {
 	if (In.Use == 0) { return false; }
