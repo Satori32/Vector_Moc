@@ -1,3 +1,4 @@
+/** /
 #include <stdio.h>
 
 #include "MemoryAllocator.h"
@@ -130,6 +131,9 @@ bool Free(Vector<T>& In) {
 	In.Use = 0;
 	return true;
 }
+/**/
+
+#include "Vector.h"
 
 int main() {
 	Vector<int> V = ConstructVector<int>(16);

@@ -1,4 +1,4 @@
-#include "Vector,h"
+#include "Vector.h"
 
 template<class T>
 Vector<T> ConstructVector(size_t Capacity) {
@@ -42,6 +42,13 @@ bool Push(Vector<T>& In, const T& D) {
 	In.Use++;
 
 	return true;
+}
+
+template<class T>
+bool Clear(Vector<T> In) {
+	In.use = 0;
+
+	return 0;
 }
 
 template <class T>
@@ -102,4 +109,20 @@ bool Free(Vector<T>& In) {
 	In.Capacity = 0;
 	In.Use = 0;
 	return true;
+}
+
+template<class T>
+T& Back(Vector<T>& In) {
+	size_t N = Size(In);
+
+	return *Index(In, N - 1);
+}
+
+template<class T>
+Vector<T> Duplicate(Vector<T>& In) {
+	Memory<T> M = Duplicate<T>(In.M);
+	Vector<T> X;
+	X.M = M;
+
+	return X;
 }
