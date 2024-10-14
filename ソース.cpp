@@ -70,6 +70,14 @@ bool Pop(Vector<T>& In) {
 	return false;
 }
 
+
+template<class T>
+T& Back(Vector<T>& In) {
+	size_t N = Size(In);
+
+	return *Index(In, N - 1);
+}
+
 template <class T>
 T* Index(Vector<T>& In, size_t P) {
 	if (In.Use <= P) { return NULL; }

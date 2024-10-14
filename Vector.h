@@ -26,3 +26,4 @@ template <class T> bool Drop(Vector<T>& In, size_t P);
 template <class T> bool Drop(Vector<T>& In, size_t P, size_t L);
 template <class T> bool Free(Vector<T>& In);
 template <class T> bool Clear(Vector<T>& In);
+template <class T> T& Back(Vector<T>& In);
