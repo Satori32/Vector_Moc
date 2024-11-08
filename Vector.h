@@ -14,6 +14,7 @@ struct Vector
 };
 
 template <class T> Vector<T> ConstructVector(size_t Capacity);
+template <class T> Vector<T> ConstructVector(T* D, size_t L);
 template <class T> bool ChangeCapacity(Vector<T>& In, size_t N);
 template <class T> bool Resize(Vector<T>& In, size_t N);
 template <class T> bool Push(Vector<T>& In, const T& D);

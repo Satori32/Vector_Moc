@@ -11,6 +11,15 @@ Vector<T> ConstructVector(size_t Capacity) {
 
 	return V;
 }
+template <class T>
+Vector<T> ConstructVector(T* D, size_t L) {
+	Vector V = ConstructVector(L);
+	for (size_t i = 0; i < L; i++) {
+		Push(V, D[i]);
+	}
+
+	return V;
+}
 
 template<class T>
 const T& Min(const T& A, const T& B) {
